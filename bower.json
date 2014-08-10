@@ -1,0 +1,15 @@
+{
+  "name": "AngularApp",
+  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Angular Application",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
