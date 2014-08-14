@@ -1,0 +1,9 @@
+body {
+    padding-top: 70px;
+    /*background: url("../images/background1.jpg") no-repeat;*/
+}
+
+.thumbnails {
+    padding: 0;
+    list-style: none;
+}

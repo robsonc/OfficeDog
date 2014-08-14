@@ -1,0 +1,25 @@
+{
+  "name": "angular-linkify",
+  "version": "0.4.0",
+  "main": "angular-linkify.js",
+  "description": "Angular filter to linkify urls, \"@\" usernames, and hashtags.",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/scottcorgan/angular-linkify",
+  "_release": "0.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.4.0",
+    "commit": "0afbfaaeefb5610d28ec472dc4525e40a44c842a"
+  },
+  "_source": "git://github.com/scottcorgan/angular-linkify.git",
+  "_target": "~0.4.0",
+  "_originalSource": "angular-linkify",
+  "_direct": true
+}

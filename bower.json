@@ -11,5 +11,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-linkify": "~0.4.0",
+    "angular-sanitize": "~1.2.22",
+    "angular-charts": "~0.2.4"
+  }
 }

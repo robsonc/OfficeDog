@@ -1,0 +1,87 @@
+<div ng-controller="notesController">
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <p>Este aplicativo tem objetivo fornecer uma maneira simples e rápida de criar notas rápidas, melhorando a capacidade
+                cerebral de retenção de informação e também ser uma fonte de de pesquisas futuras.</p>
+            <form name="formNotes" ng-submit="addNote()">
+                <div class="form-group">
+                    <label>Todo:</label>
+                    <textarea required="true" name="note" class="form-control" rows="8" ng-model="note" placeholder="Enter a note here"></textarea>
+<!--                    <div ng-show="formNotes.note.$dirty && formNotes.note.$invalid && formNotes.submitted">
+                        <div class="alert alert-warning" ng-show="formNotes.note.$error.required">Preencha este campo!</div>
+                    </div>-->
+                </div>
+                <button type="submit" class="btn btn-primary pull-right" value="Add">
+                    <span class="glyphicon glyphicon-floppy-saved"></span>
+                    Add
+                </button>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Entre o texto para ser buscado..." ng-model="searchText" />
+                <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+            </div>
+            <hr />
+            <table class="table table-striped table-hover table-condensed">
+                <thead>
+                <tr>
+                    <th class="col-sm-8">NOTE</th>
+                    <th class="col-sm-3">DATA</th>
+                    <th class="col-sm-1"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in items | orderBy:'datetime':true | filter:searchText">
+                    <td ng-bind-html="item.note | linky:'_blank'"></td>
+                    <td class="text-center">{{ item.datetime | date:'d/MM/yy h:mm a' }}</td>
+                    <td>
+                        <button class="btn btn-default btn-xs" ng-click="deleteNote(item)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+<!--            <div ng-repeat="item in items | orderBy:'datetime':true | filter:searchText">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Data: {{ item.datetime | date:'d/MM/yy h:mm a' }}
+                        <button class="pull-right btn btn-default btn-xs" ng-click="deleteNote(item)">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </div>
+                    <div class="panel-body">
+                        <p ng-bind-html="item.note | linky:'_blank'"></p>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+
+    <hr />
+<!-- table -->
+<!--    <hr />
+
+    <div class="row">
+        <div class="col-sm-4" ng-repeat="item in items | orderBy:'datetime':true | filter:searchText">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Data: {{ item.datetime | date:'d/MM/yy h:mm a' }}
+                    <button class="pull-right btn btn-default btn-xs" ng-click="deleteNote(item)">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </div>
+                <div class="panel-body">
+                    {{ item.note }}
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+</div>
