@@ -3,11 +3,11 @@ OfficeDog
 
 Personal Assistant
 
-Technologies
+###Technologies
 
 * Bootstrap.js
 * jQuery
 * Angular.js
 * Node.js
-* Express for node
-* Mongoose
+* Express for REST API
+* Mongoose for MongoDB
